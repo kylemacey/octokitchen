@@ -1,1 +1,46 @@
 # <%= name %>
+
+TODO: Add a summary of the script
+
+## Installation
+
+<% if @git_info %>
+### Clone this repository
+
+```shell
+git clone <%= @git_info[:git_origin_url] %>
+cd <%= [@git_info[:git_path], @directory].join %>
+```
+<% else %>
+### Enter into the command directory
+
+```shell
+cd <%= @directory %>
+```
+<% end %>
+
+### Install dependencies
+<% if options[:gemfile] %>
+```shell
+bundle install
+```
+<% else %>
+```shell
+gem install octokit <%= @dependencies.join(' ') %>
+```
+<% end %>
+
+## Usage
+
+### Configure Octokit
+
+```shell
+export OCTOKIT_API_ENDPOINT="https://github.example.com/api/v3" # Default: "https://api.github.com"
+export OCTOKIT_ACCESS_TOKEN=00000000000000000000000
+```
+
+### Execute
+
+```shell
+ruby <%= @filename %>
+```
