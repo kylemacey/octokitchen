@@ -25,5 +25,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry"
   spec.add_dependency "octokit", "~> 4.0.1"
   spec.add_dependency "thor", "~> 0.19.1"
-  spec.add_dependency "git", "~>1.2.9.1"
 end
