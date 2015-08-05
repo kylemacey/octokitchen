@@ -1,0 +1,3 @@
+source 'https://rubygems.org'
+
+<%= @dependencies.map { |d| "gem \"#{d}\"\n" }.join %>

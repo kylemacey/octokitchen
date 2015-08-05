@@ -23,7 +23,7 @@ module Octostrap
       end
       @directory = directory
       @filename = [underscore(name), 'rb'].join('.')
-      @dependencies = options[:dependencies].to_s.split(',')
+      @dependencies = options[:dependencies].to_s.split(',').unshift('octokit')
       @git_info = git_info
     end
 
@@ -33,6 +33,12 @@ module Octostrap
 
     def new_readme
       template('templates/new_readme.tt', "#{@directory}/README.md")
+    end
+
+    def new_gemfile
+      if options[:gemfile]
+        template('templates/new_gemfile.tt', "#{@directory}/Gemfile")
+      end
     end
 
     private
@@ -67,7 +73,7 @@ module Octostrap
     end
 
     def git_origin_url
-      `git config --get remote.origin.url`
+      `git config --get remote.origin.url`.strip
     end
   end
 end
