@@ -12,6 +12,7 @@ module Octostrap
     argument :path, default: ""
     class_option :gemfile, type: "boolean", default: false, desc: "Whether or not the script should use a Gemfile, defaults to `no-gemfile`", aliases: "-g"
     class_option :dependencies, desc: "comma-separated list of dependencies"
+    class_option :command, desc: "What the name of the command/filename should be. Defaults to an underscored version of the script name."
 
 
     desc  "Generate a new GitHub script"
@@ -22,7 +23,7 @@ module Octostrap
         exit
       end
       @directory = directory
-      @filename = [underscore(name), 'rb'].join('.')
+      @filename = [(options[:command] || underscore(name)), 'rb'].join('.')
       @dependencies = options[:dependencies].to_s.split(',').unshift('octokit')
       @git_info = git_info
     end
