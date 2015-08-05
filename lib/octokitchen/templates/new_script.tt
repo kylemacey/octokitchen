@@ -1,4 +1,4 @@
-# <%= name %> - Generated with Octostrap https://github.com/kylemacey/octostrap
+# <%= name %> - Generated with Octokitchen https://github.com/kylemacey/octokitchen
 <% unless options[:gemfile] %>
 # Dependencies
 <%= @dependencies.map { |d| "require \"#{d}\"\n" }.join %>

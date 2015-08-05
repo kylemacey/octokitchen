@@ -1,13 +1,13 @@
-# Octostrap
+# Octokitchen
 
-Octostrap is a nifty little utility for writing small scripts for GitHub!
+Octokitchen is a nifty little utility for writing small scripts for GitHub!
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'octostrap'
+gem 'octokitchen'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install octostrap
+    $ gem install octokitchen
 
 ## Usage
 
@@ -30,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kylemacey/octostrap. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kylemacey/octokitchen. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

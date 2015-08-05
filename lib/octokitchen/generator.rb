@@ -1,12 +1,12 @@
 require 'thor'
 require 'pry'
 
-module Octostrap
+module Octokitchen
   class Generator < Thor::Group
     include Thor::Actions
 
 
-    def self.banner; 'octostrap [OPTIONS] <NAME> [<DIRECTORY>]'; end
+    def self.banner; 'octokitchen [OPTIONS] <NAME> [<DIRECTORY>]'; end
 
     argument :name, default: ""
     argument :path, default: ""

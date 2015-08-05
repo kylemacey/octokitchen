@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in octostrap.gemspec
+# Specify your gem's dependencies in octokitchen.gemspec
 gemspec
