@@ -20,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+Usage:
+  octokitchen [OPTIONS] <NAME> [<DIRECTORY>]
+
+Options:
+  -g, [--gemfile], [--no-gemfile]    # Whether or not the script should use a Gemfile, defaults to `no-gemfile`
+      [--dependencies=DEPENDENCIES]  # comma-separated list of dependencies
+      [--command=COMMAND]            # What the name of the command/filename should be. Defaults to an underscored version of the script name.
+
+Generate a new GitHub script
+```
+
+## Git Detection
+
+If you're using git and in a git project directory when you run `octokitchen`, the generated README will automatically contain git cloning information based off of whichever remote you have set to `origin`. 
 
 ## Development
 
